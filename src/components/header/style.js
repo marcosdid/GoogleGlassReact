@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Myheader = styled.div`
   position: fixed;
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 40px 50px 40px;
+  padding: 30px 50px 30px;
   top: 0;
   right: 0;
   left: 0;
