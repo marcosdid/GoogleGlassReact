@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const Myheader = styled.div`
   position: fixed;
   max-width: 1300px;
-  margin: 0 auto;
-  padding: 30px 50px 30px;
   top: 0;
   right: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 30px 50px 30px;
   background-color: rgba(0, 0, 0, 0.2);
 
   img {

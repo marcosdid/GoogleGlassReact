@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
-import logo from '../../assents/glass-logo-peq.jpg'
+import logo from '../../assents/logo.png'
 
 import { Myheader } from './style'
 
 function Header() {
+  const refHeader = useRef()
+
+  useEffect(() => {
+    window.addEventListener('scroll', AnimateMenu)
+  })
+  
+  function AnimateMenu() {
+    const scroll = window.scrollY
+
+    if(scroll >= 20) {
+      refHeader.current.headerPosition = true
+
+      console.log(refHeader)
+    }
+
+    if(scroll <= 20) {
+      refHeader.current.headerPosition = false
+
+      console.log(refHeader.current)
+    }
+  }
+
   return (
-    <Myheader>
+    <Myheader ref={refHeader} >
       <img src={logo} alt='logo glass' />
 
       <nav>
