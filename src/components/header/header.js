@@ -1,42 +1,27 @@
-import React, { useEffect, useRef } from 'react'
-
-import logo from '../../assents/logo.png'
+import React, { useEffect, useState } from 'react'
 
 import { Myheader } from './style'
 
 function Header() {
-  const refHeader = useRef()
+  const [refHeader, setRefHeader] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', AnimateMenu)
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      scroll >= 20 ? setRefHeader(true) : setRefHeader(false);
+    })
   })
-  
-  function AnimateMenu() {
-    const scroll = window.scrollY
-
-    if(scroll >= 20) {
-      refHeader.current.headerPosition = true
-
-      console.log(refHeader)
-    }
-
-    if(scroll <= 20) {
-      refHeader.current.headerPosition = false
-
-      console.log(refHeader.current)
-    }
-  }
 
   return (
-    <Myheader ref={refHeader} >
-      <img src={logo} alt='logo glass' />
+    <Myheader refHeader={refHeader} >
+      <img src='' alt=''/>
 
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Especificações</li>
-          <li>Sobre</li>
-          <li>Contato</li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Especificações</a></li>
+          <li><a href="">Sobre</a></li>
+          <li><a href="">Contato</a></li>
         </ul>
       </nav>
     </Myheader>
