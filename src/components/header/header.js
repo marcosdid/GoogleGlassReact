@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Myheader } from './style'
 
@@ -8,7 +9,7 @@ function Header() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const scroll = window.scrollY;
-      scroll >= 20 ? setRefHeader(true) : setRefHeader(false);
+      scroll >= 1 ? setRefHeader(true) : setRefHeader(false);
     })
   })
 
@@ -18,10 +19,10 @@ function Header() {
 
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Especificações</a></li>
-          <li><a href="">Sobre</a></li>
-          <li><a href="">Contato</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/especificacoes">Especificações</Link></li>
+          <li><Link to="/fotos">Fotos</Link></li>
+          <li><Link to="/contato">Contato</Link></li>
         </ul>
       </nav>
     </Myheader>

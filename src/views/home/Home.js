@@ -1,151 +1,72 @@
 import React from 'react'
 
 import Header from '../../components/header/header'
-import { Body } from './style'
+import Footer from '../../components/Footer'
+
+import { Section } from './style'
+import { Body } from '../../globalStyles'
 
 function Home() {
   return (
     <div>
       <Header />
       <Body>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          accusamus soluta voluptatibus illum provident iusto optio eum velit
-          porro veritatis illo iste magni, doloremque quia vel facere, veniam,
-          cupiditate deserunt!
-        </p>
+        <Section>
+          <article>
+            <header>
+              <p>Tecnologia {'>'} Inovações</p>
+              <h1>Saiba tudo sobre o Google Glass</h1>
+              <p>por Gustavo Guanabara</p>
+              <span>Atualizado em 23/Abril/2013</span>
+            </header>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rem
-          iure inventore omnis molestiae quos earum saepe eligendi quisquam
-          perspiciatis perferendis, ipsam officia beatae eos dolorum et.
-          Doloremque, veniam deserunt?
-        </p>
+            <h2>O que é</h2>
+            <p>O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de Project
+            Glass, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para
+            2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além
+            disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
-          amet deserunt beatae adipisci, officia enim consequatur earum
-          similique, laudantium velit numquam quam ipsam ipsum corrupti eveniet
-          quo, mollitia nam.
-        </p>
+            [AQUI ENTRA UMA FOTO]
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint
-          adipisci ut commodi consequatur deleniti saepe eligendi ipsum,
-          aspernatur, reiciendis accusamus laboriosam praesentium modi ipsam
-          quisquam. Nihil nisi quo consequuntur!
-        </p>
+            <h2>Data de lançamento</h2>
+            <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento
+            para as lojas fica para, pelo menos, 2014.</p>
 
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis maxime
-          repudiandae accusamus dolorem, fugiat natus repellendus quos atque
-          nulla. Dolore sapiente voluptatibus impedit aliquam eius illum in
-          labore rerum ipsa?
-        </p>
+            <h2>Especificações Técnicas</h2>
+            <table>
+            <caption>Tabela Técnica do Google Glass Mar/2013</caption>
+              <tr><td>Tela</td><td>Resolução equivalente a tela de 25"</td></tr>
+              <tr><td>camera</td><td>5MP para fotos / 720p para vídeos</td></tr>
+              <tr><td>conectividade</td><td> Wi-Fi/ Bluetooth</td></tr>
+              <tr><td>Memoria Interna</td><td> 12GB</td></tr>
+            </table>
+            
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-          placeat architecto dignissimos nam eaque aperiam dolore, repellat
-          aliquam perspiciatis aspernatur ipsum expedita id reiciendis sequi
-          tenetur est consequatur nesciunt necessitatibus?
-        </p>
+            <h2>Como funciona</h2>
+            <p>De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário.
+            Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça</p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
+            <h2>O que você pode fazer com o Google Glasses</h2>
+            <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você
+            está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
+            [AQUI ENTRA UM VÍDEO]
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
+            <h1>Outras Notícias</h1>
+          <h2>Vídeo mais recente</h2>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
+          [AQUI ENTRA UM VÍDEO]
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
+          <h2>Novidades no Glass</h2>
+          <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas
+          usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por
+          meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          blanditiis repudiandae quo animi iste aliquam suscipit laborum
-          pariatur dolore in quia quas obcaecati, distinctio libero, molestias
-          laboriosam, sapiente minima! Odit.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsa
-          alias doloribus! Quidem distinctio quas, natus blanditiis quia aperiam
-          exercitationem laborum voluptatem quisquam vero ipsa eius cumque
-          eligendi magnam labore.
-        </p>
+          <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que,
+          em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
+          </article>
+        </Section>
+        <Footer/>
       </Body>
     </div>
   )
