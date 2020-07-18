@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Header from '../../components/header/header'
 import Footer from '../../components/Footer'
 
-import { Section } from './style'
+import { Section, Article, Aside } from './style'
 import { Body } from '../../globalStyles'
 
 function Home() {
+  const [refWindow, setRefWindow] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      window.innerWidth <= 1360 ? setRefWindow(true) : setRefWindow(false)
+    })
+  })
+
   return (
     <div>
       <Header />
       <Body>
-        <Section>
-          <article>
+        <Section >
+          <Article refWindow={refWindow} >
             <header>
-              <p>Tecnologia {'>'} Inovações</p>
               <h1>Saiba tudo sobre o Google Glass</h1>
               <p>por Gustavo Guanabara</p>
               <span>Atualizado em 23/Abril/2013</span>
@@ -34,11 +41,13 @@ function Home() {
 
             <h2>Especificações Técnicas</h2>
             <table>
-            <caption>Tabela Técnica do Google Glass Mar/2013</caption>
-              <tr><td>Tela</td><td>Resolução equivalente a tela de 25"</td></tr>
-              <tr><td>camera</td><td>5MP para fotos / 720p para vídeos</td></tr>
-              <tr><td>conectividade</td><td> Wi-Fi/ Bluetooth</td></tr>
-              <tr><td>Memoria Interna</td><td> 12GB</td></tr>
+              <caption>Tabela Técnica do Google Glass Mar/2013</caption>
+              <tbody>
+                <tr><td>Tela</td><td>Resolução equivalente a tela de 25"</td></tr>
+                <tr><td>camera</td><td>5MP para fotos / 720p para vídeos</td></tr>
+                <tr><td>conectividade</td><td> Wi-Fi/ Bluetooth</td></tr>
+                <tr><td>Memoria Interna</td><td> 12GB</td></tr>
+              </tbody>
             </table>
             
 
@@ -51,20 +60,22 @@ function Home() {
             está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
             [AQUI ENTRA UM VÍDEO]
+          </Article>
 
+          <Aside refWindow={refWindow} >
             <h1>Outras Notícias</h1>
-          <h2>Vídeo mais recente</h2>
+            <h2>Vídeo mais recente</h2>
 
-          [AQUI ENTRA UM VÍDEO]
+            [AQUI ENTRA UM VÍDEO]
 
-          <h2>Novidades no Glass</h2>
-          <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas
-          usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por
-          meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
+            <h2>Novidades no Glass</h2>
+            <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas
+            usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por
+            meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</p>
 
-          <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que,
-          em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
-          </article>
+            <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que,
+            em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.</p>
+          </Aside>
         </Section>
         <Footer/>
       </Body>

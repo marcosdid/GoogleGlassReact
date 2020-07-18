@@ -13,8 +13,8 @@ const GlobalStyled = createGlobalStyle`
 `
 
 const Body = styled.div`
-  padding: 100px 50px 5px;
-  max-width: 1300px;
+  padding: 100px 35px 5px;
+  max-width: 1280px;
   margin: 0 auto;
   background-color: #ffffff;  
 `

@@ -5,7 +5,7 @@ import logo2 from '../../assents/glass-logo-peq.jpg'
 
 export const Myheader = styled.div`
   position: fixed;
-  max-width: 1300px;
+  max-width: 1250px;
   top: 0;
   right: 0;
   left: 0;
