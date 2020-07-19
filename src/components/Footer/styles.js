@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const MyFooter = styled.footer`
-  border-top: 1px solid black;
+  border-top: 2px solid rgb(220,220,220);
   margin-top: 5px;
   p {
     margin: 10px 0px;

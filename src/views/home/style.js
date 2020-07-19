@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 const Section = styled.section`
-  margin: 10px;
-  padding: 10px;
+  margin: ${props => props.refWindow ? 'none' : '10px'};
+  padding: ${props => props.refWindow ? 'none' : '10px'};
   display: flex;
   flex-wrap: wrap;
   h1 {
-    font-size: 16pt;
+    font-size: 25px;
     text-align: center;
   }
   h2 {
-    font-size: 14pt;
+    font-size: 17px;
     text-align: center;
   }
   p {
@@ -19,9 +19,10 @@ const Section = styled.section`
 `
 
 const Article = styled.article`
-  max-width: ${props => props.refWindow ? '100%' : '800px'};
-  padding-right: 15px;
-  border-right: ${props => props.refWindow ? 'none' : '1px solid black'};
+  max-width: ${props => props.refWindow ? '100%' : '700px'};
+  padding: ${props => props.refWindow ? 'none' : '40px'};
+  border-right: ${props => props.refWindow ? 'none' : '2px solid black'};
+  border-color: rgb(220,220,220);
   header {
     h1 {
       margin-top: 10px;
@@ -36,11 +37,17 @@ const Article = styled.article`
       text-align: right;
     }
   }
+
+  img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `
 
 const Aside = styled.aside`
-  max-width: ${props => props.refWindow ? '100%' : '400px'};
-  margin-left: ${props => props.refWindow ? 'none' : '15px'};
+  max-width: ${props => props.refWindow ? '100%' : '370px'};
+  padding: ${props => props.refWindow ? 'none' : '40px'};
   h1 {
     margin-top: 10px;
   }

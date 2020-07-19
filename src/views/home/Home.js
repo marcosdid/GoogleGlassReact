@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react'
 
 import Header from '../../components/header/header'
 import Footer from '../../components/Footer'
+import YtVideo from '../../components/YtVideo'
 
 import { Section, Article, Aside } from './style'
 import { Body } from '../../globalStyles'
+
+import ImgArticlePrincipal from '../../assents/google-glass-model.jpg'
 
 function Home() {
   const [refWindow, setRefWindow] = useState(false)
 
   useEffect(() => {
+    if (window.innerWidth <= 1360) {
+      setRefWindow(true)
+    }
+
     window.addEventListener('resize', () => {
       window.innerWidth <= 1360 ? setRefWindow(true) : setRefWindow(false)
     })
@@ -18,26 +25,30 @@ function Home() {
   return (
     <div>
       <Header />
-      <Body>
-        <Section >
+      <Body refWindow={refWindow} >
+        <Section refWindow={refWindow} >
           <Article refWindow={refWindow} >
             <header>
               <h1>Saiba tudo sobre o Google Glass</h1>
-              <p>por Gustavo Guanabara</p>
-              <span>Atualizado em 23/Abril/2013</span>
+              <p>por Marcos Alves</p>
+              <span>Atualizado em: 19/Julho/2020</span>
             </header>
 
             <h2>O que é</h2>
-            <p>O Google Glass é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de Project
-            Glass, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeoconferências. Seu lançamento está previsto para
-            2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além
-            disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
+            <p>
+              O Glass Enterprise Edition 2 é um dispositivo vestível que ajuda as empresas a melhorar a qualidade de sua produção e ajuda seus funcionários a
+              trabalhar de maneira mais inteligente, rápida e segura. Fornece aos trabalhadores e profissionais práticos a assistência visual ativada por voz,
+              projetada para ser usada o dia todo com seu perfil leve e confortável.
+            </p>
 
-            [AQUI ENTRA UMA FOTO]
+            <img src={ImgArticlePrincipal} alt="Img Google glass mulher"/>
 
             <h2>Data de lançamento</h2>
-            <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento
-            para as lojas fica para, pelo menos, 2014.</p>
+            <p>
+              Nesta segunda-feira, 20, o Google anunciou uma nova versão do Google Glass, os óculos de realidade aumentada para uso corporativo, que agora é
+              classificado como um produto oficial da empresa em vez de um experimento. Chamado de Glass Enterprise Edition 2, o dispositivo se parece muito mais
+              com óculos comuns e tem um novo processador da Qualcomm, uma câmera aprimorada, uma entrada USB-C para carregamento mais rápido e várias outras atualizações.
+            </p>
 
             <h2>Especificações Técnicas</h2>
             <table>
@@ -59,14 +70,14 @@ function Home() {
             <p>O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-humano”, já que o aparelho pode indicar a quantos metros você
             está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz.</p>
 
-            [AQUI ENTRA UM VÍDEO]
+            <YtVideo urlVideo="https://www.youtube.com/embed/cAO7FJ3vQQo" title="Google Glass, ele está entre nós! [Análise]"/>
           </Article>
 
           <Aside refWindow={refWindow} >
             <h1>Outras Notícias</h1>
             <h2>Vídeo mais recente</h2>
 
-            [AQUI ENTRA UM VÍDEO]
+            <YtVideo urlVideo="https://www.youtube.com/embed/oxELzOm0dmQ" title="Testamos o Google Glass: afinal, para que ele serve?"/>
 
             <h2>Novidades no Glass</h2>
             <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas
