@@ -1,16 +1,20 @@
 import React, {useState} from 'react'
 
 import { Burguer } from './styles'
+import Nav from './Nav'
 
-const BurguerNav = () => {
+const BurguerNav = ({refHeader}) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <Burguer open={open} onClick={() => setOpen(!open)}>
-      <div></div>
-      <div></div>
-      <div></div>
-    </Burguer>
+    <>
+      <Burguer refHeader={refHeader} open={open} onClick={() => setOpen(!open)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Burguer>
+      <Nav open={open}/>
+    </>
   )
 }
 

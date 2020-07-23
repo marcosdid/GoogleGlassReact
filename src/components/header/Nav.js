@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import { Nav } from './styles'
 
-const NavRigth = () => {
+const NavRigth = ({open}) => {
   return (
-    <Nav className="menu-inline">
+    <Nav open={open}>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/especificacoes">Especificações</Link></li>

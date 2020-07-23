@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { Myheader } from './styles'
 
-import Nav from './Nav'
+
 import Burguer from './Burguer'
 
 function Header() {
@@ -18,9 +18,7 @@ function Header() {
   return (
     <Myheader refHeader={refHeader} >
       <img src='' alt=''/>
-
-      <Nav />
-      <Burguer />
+      <Burguer refHeader={refHeader} />
     </Myheader>
   )
 }
