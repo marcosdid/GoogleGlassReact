@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
-import { Myheader } from './style'
+import { Myheader } from './styles'
+
+import Nav from './Nav'
+import Burguer from './Burguer'
 
 function Header() {
   const [refHeader, setRefHeader] = useState(false);
@@ -17,14 +19,8 @@ function Header() {
     <Myheader refHeader={refHeader} >
       <img src='' alt=''/>
 
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/especificacoes">Especificações</Link></li>
-          <li><Link to="/fotos">Fotos</Link></li>
-          <li><Link to="/contato">Contato</Link></li>
-        </ul>
-      </nav>
+      <Nav />
+      <Burguer />
     </Myheader>
   )
 }

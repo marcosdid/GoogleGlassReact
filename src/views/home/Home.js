@@ -1,33 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import Header from '../../components/header/header'
+import Header from '../../components/header/NavBar'
 import Footer from '../../components/Footer'
 import YtVideo from '../../components/YtVideo'
 
 import { Section, Article, Aside } from './style'
-import { Body } from '../../globalStyles'
+import { Container } from '../style.js'
 
 import ImgArticlePrincipal from '../../assents/google-glass-model.jpg'
 
 function Home() {
-  const [refWindow, setRefWindow] = useState(false)
-
-  useEffect(() => {
-    if (window.innerWidth <= 1360) {
-      setRefWindow(true)
-    }
-
-    window.addEventListener('resize', () => {
-      window.innerWidth <= 1360 ? setRefWindow(true) : setRefWindow(false)
-    })
-  })
-
   return (
     <div>
-      <Header />
-      <Body refWindow={refWindow} >
-        <Section refWindow={refWindow} >
-          <Article refWindow={refWindow} >
+      <Header/>
+      <Container>
+        <Section>
+          <Article>
             <header>
               <h1>Saiba tudo sobre o Google Glass</h1>
               <p>por Marcos Alves</p>
@@ -73,7 +61,7 @@ function Home() {
             <YtVideo urlVideo="https://www.youtube.com/embed/cAO7FJ3vQQo" title="Google Glass, ele está entre nós! [Análise]"/>
           </Article>
 
-          <Aside refWindow={refWindow} >
+          <Aside >
             <h1>Outras Notícias</h1>
             <h2>Vídeo mais recente</h2>
 
@@ -89,7 +77,7 @@ function Home() {
           </Aside>
         </Section>
         <Footer/>
-      </Body>
+      </Container>
     </div>
   )
 }

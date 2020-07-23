@@ -1,23 +1,32 @@
-import styled ,{ createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyled = createGlobalStyle`
-  body {
+  * {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100vh;
     margin: 0;
-    background-color: rgba(220, 220, 220, 0.3);
     font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    line-height: 1.6;
+    font-size: 62.5%;
+  }
+
+  body {
+    background-color: rgba(220, 220, 220, 0.3);
+    font-size: 1.6rem;
   }
 
   p {
     text-align: justify;
-    font-size: 17px;
   }
 `
-const Body = styled.div`
-  padding: ${props => props.refWindow ? '100px 20px 5px' : '100px 35px 5px'};
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #ffffff;  
-`
 
-export {GlobalStyled, Body } 
+
+export default GlobalStyled
 

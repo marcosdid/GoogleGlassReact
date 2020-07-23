@@ -1,16 +1,16 @@
 import React from 'react'
 
-import Header from '../../components/header/header'
+import Header from '../../components/header/NavBar'
 import Footer from '../../components/Footer'
-import { Body } from '../../globalStyles'
+import { Container } from '../style.js'
 
 export default function Fotos() {
   return (
     <div>
       <Header />
-      <Body>
+      <Container>
         <Footer />
-      </Body>
+      </Container>
     </div>
   )
 }
