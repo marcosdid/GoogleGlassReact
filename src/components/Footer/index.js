@@ -5,8 +5,7 @@ import {MyFooter} from './styles'
 export default function Footer() {
   return (
     <MyFooter>
-      <footer>
-        <p>Copyright 2013 - by Marcos Alves</p>
+        <p>Copyright 2020 - by Marcos Alves</p>
         <p>
           <a 
             href="https://www.linkedin.com/in/marcos-alves-4255381a0/" 
@@ -22,7 +21,6 @@ export default function Footer() {
             GitHub
           </a>
         </p>
-      </footer>
     </MyFooter>
   )
 }

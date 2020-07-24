@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const MyFooter = styled.footer`
+  justify-content: flex-end;
+  width: 100%;
   border-top: 2px solid rgb(220,220,220);
   margin-top: 10px;
   p {
@@ -11,6 +13,7 @@ export const MyFooter = styled.footer`
       color: black;
       &:hover {
         text-decoration: underline;
+        color: #1087ff;
       }
     }
   }
