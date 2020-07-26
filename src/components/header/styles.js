@@ -18,7 +18,7 @@ const Myheader = styled.div`
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   @media (max-width: 900px) {
-    padding: ${props => props.refHeader ? '8px 55px' : '20px 55px'};
+    padding: ${props => props.refHeader ? '20px 55px' : '20px 55px'};
   }
   @media (max-width: 768px) {
     padding-left: 20px;
@@ -33,9 +33,14 @@ const Myheader = styled.div`
     height: 40px;
     transition: 0.3s;
     @media (max-width: 900px) {
-      background-size: 140px 30px;
-      width: 150px;
+      background-size: 110px 30px;
+      width: 110px;
       height: 30px;
+    }
+    @media (max-width: 425px) {
+      background-size: 90px 20px;
+      width: 90px;
+      height: 20px;
     }
   }
 `
@@ -43,10 +48,10 @@ const Myheader = styled.div`
 const Burguer = styled.div`
   display: none;
   width: 30px;
-  height: 22px;
+  height: 20px;
   position: fixed;
-  top: ${props => props.refHeader ? '12px' : '25px'};
-  right: 130px;
+  top: 25px;
+  right: 55px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -54,29 +59,27 @@ const Burguer = styled.div`
   z-index: 20;
   @media (max-width: 900px) {
     display: flex;
-    right: 55px;
   }
   @media (max-width: 768px) {
     right: 20px;
   }
-
-  &:hover {
-    div {
-      background-color: #1087ff;
-    }  
+  @media (max-width: 425px) {
+    top:20px
   }
-
-
+  @media (hover: hover) {
+    &:hover div {
+      background-color: #1087ff;
+    }
+  }
   div {
     margin-top: 0px;
     width: 2.5rem;
-    height: 4px;
+    height: 3px;
     background-color: black;
     transform-origin: 1px;
     transition: .3s;
-
     &:nth-child(1) {
-      transform: ${({open}) => open ? 'rotate(45deg) translate(7px,-7px)' : 'rotate(0)'};
+      transform: ${({open}) => open ? 'rotate(45deg) translate(7px,-8px)' : 'rotate(0)'};
       width: ${({open}) => open ? '2.8rem' : '2.5rem'};
     }
 
@@ -86,7 +89,7 @@ const Burguer = styled.div`
     }
 
     &:nth-child(3) {
-      transform: ${({open}) => open ? 'rotate(-45deg) translate(7px,7px)' : 'rotate(0)'};
+      transform: ${({open}) => open ? 'rotate(-45deg) translate(7px,8px)' : 'rotate(0)'};
       width: ${({open}) => open ? '2.8rem' : '2.5rem'};
     }
   }
@@ -110,8 +113,10 @@ const Nav = styled.nav`
         text-decoration: none;
         font-size: 2.0rem;
 
-        &:hover {
-          color: #1087ff;
+        @media (hover: hover) {
+          &:hover {
+            color: #1087ff;
+          }
         }
       }
     }

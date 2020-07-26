@@ -9,8 +9,7 @@ const Section = styled.section`
 const Article = styled.article`
   max-width: 65%;
   padding-right: 40px;
-  border-right: 2px solid black;
-  border-color: rgb(220,220,220);
+  border-right: 2px solid rgb(220,220,220);
   @media (max-width: 768px) {
     max-width: 100%;
     padding-right: 0px;

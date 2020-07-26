@@ -23,7 +23,6 @@ const GlobalStyled = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
   }
 
-
   h1 {
     font-size: 3rem;
     text-align: center;
@@ -38,8 +37,9 @@ const GlobalStyled = createGlobalStyle`
 
   p {
     text-indent: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: justify;
+    color: rgb(77, 77, 77);
   }
 
   div#root {

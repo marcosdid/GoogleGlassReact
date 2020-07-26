@@ -8,7 +8,7 @@ const Container = styled.div`
   height: 100%;
   max-width: calc(100% - 200px);
   margin: 0 auto;
-  padding: 80px 35px 0px;
+  padding: 95px 35px 0px;
   background-color: #ffffff;
   transition: 0.3s;
   @media (max-width: 900px) and (min-width: 767px) {

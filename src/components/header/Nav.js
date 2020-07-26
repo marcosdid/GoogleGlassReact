@@ -8,8 +8,8 @@ const NavRigth = ({open}) => {
     <Nav open={open}>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/especificacoes">Especificações</Link></li>
         <li><Link to="/fotos">Fotos</Link></li>
+        <li><Link to="/especificacoes">Especificações</Link></li>
         <li><Link to="/contato">Contato</Link></li>
       </ul>
     </Nav>
