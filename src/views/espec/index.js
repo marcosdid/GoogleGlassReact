@@ -1,28 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { Container, DivGeneric } from '../style.js'
 import Header from '../../components/header/NavBar'
 import Footer from '../../components/Footer'
-import { Section, Table } from './style'
+import Camera from '../../components/glassEsquema/camera'
+import Gadgets from '../../components/glassEsquema/gadgets'
+import Sensores from '../../components/glassEsquema/sensores'
+import Vidro from '../../components/glassEsquema/vidro'
+import { Section, Table, EsquemaGlass } from './style'
 
 import glassEsquema from '../../assents/glass-esquema-marcado.jpg'
 
 export default function Espec() {
+  const [esquema, setEsquema] = useState()
+
   return (
     <DivGeneric>
       <Header />
       <Container>
         <Section>
-          <div>
+          <EsquemaGlass>
+            <h2>Clique nas areas destacadas em vermelho</h2>
             <img src={glassEsquema} useMap="#mapa-Google-Glass"/>
             <map name="mapa-Google-Glass">
-              <area shape="rect" coords="179,202,270,260" href="./google-glass.html#tela" target="janela" />
-              <area shape="circle" coords="158,243,12" href="./google-glass.html#camera" target="janela" />
-              <area shape="circle" coords="76,51,12" href="./google-glass.html#gadgets" target="janela" />
-              <area shape="poly" coords="28,143,83,216,84,249,27,169" href="./google-glass.html#sensores" target="janela" />
+              <area shape="rect" coords="179,202,270,260" onClick={() => setEsquema(Vidro)} />
+              <area shape="circle" coords="158,243,12" onClick={() => setEsquema(Camera)} />
+              <area shape="circle" coords="76,51,12" onClick={() => setEsquema(Gadgets)} />
+              <area shape="poly" coords="28,143,83,216,84,249,27,169" onClick={() => setEsquema(Sensores)} />
             </map>
-            <div className="janela" name="janela"></div>
-          </div>
+            <div className="janela" name="janela">{esquema}</div>
+          </EsquemaGlass>
           <Table>
             <h2>Tabela Técnica do Google Glass </h2>
               <table>
