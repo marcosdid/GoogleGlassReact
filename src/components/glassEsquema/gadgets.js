@@ -8,7 +8,13 @@ const Scamera = styled.div`
   }
 `
 const Camera = () => {
-  return <h1>aaaaaaaaaaaaa</h1>
+  return <Scamera>
+    <h3>Gadgets</h3>
+    <p>
+    Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como
+    videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.
+    </p>
+  </Scamera>
 }
 
 export default Camera

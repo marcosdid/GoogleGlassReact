@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,9 +20,7 @@ const Container = styled.div`
   }
 `
 
-const DivGeneric = styled.div`
+export const DivGeneric = styled.div`
   height: 100%;
   width: 100%;
 `
-
-export {Container, DivGeneric}

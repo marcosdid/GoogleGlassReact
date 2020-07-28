@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-const Section = styled.section`
+export const Section = styled.section`
   display: flex;
   flex-wrap: wrap;
   
 `
 
-const Article = styled.article`
+export const Article = styled.article`
   max-width: 65%;
   padding-right: 40px;
   border-right: 2px solid rgb(220,220,220);
@@ -33,7 +33,7 @@ const Article = styled.article`
 
 `
 
-const Aside = styled.aside`
+export const Aside = styled.aside`
   max-width: 35%;
   padding-left: 40px;
   @media (max-width: 768px) {
@@ -41,6 +41,3 @@ const Aside = styled.aside`
     padding-left: 0px;
   }
 `
-
-
-export { Section, Article, Aside }

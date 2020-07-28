@@ -21,12 +21,12 @@ export default function Espec() {
         <Section>
           <EsquemaGlass>
             <h2>Clique nas areas destacadas em vermelho</h2>
-            <img src={glassEsquema} useMap="#mapa-Google-Glass"/>
+            <img src={glassEsquema} useMap="#mapa-Google-Glass" alt="Esquema do oculos google glass"/>
             <map name="mapa-Google-Glass">
-              <area shape="rect" coords="179,202,270,260" onClick={() => setEsquema(Vidro)} />
-              <area shape="circle" coords="158,243,12" onClick={() => setEsquema(Camera)} />
-              <area shape="circle" coords="76,51,12" onClick={() => setEsquema(Gadgets)} />
-              <area shape="poly" coords="28,143,83,216,84,249,27,169" onClick={() => setEsquema(Sensores)} />
+              <area shape="rect" coords="179,202,270,260" onClick={() => setEsquema(Vidro)} alt="Descrição Vidro"/>
+              <area shape="circle" coords="158,243,12" onClick={() => setEsquema(Camera)} alt="Descrição Camera"/>
+              <area shape="circle" coords="76,51,12" onClick={() => setEsquema(Gadgets)} alt="Descrição Gadgets"/>
+              <area shape="poly" coords="28,143,83,216,84,249,27,169" onClick={() => setEsquema(Sensores)} alt="Descrição Sensores"/>
             </map>
             <div className="janela" name="janela">{esquema}</div>
           </EsquemaGlass>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Section = styled.section`
+export const Section = styled.section`
   display: flex;
   justify-content: space-evenly;
   @media (max-width: 1200px) {
@@ -22,7 +22,7 @@ const Section = styled.section`
   }
 `
 
-const Table = styled.div`
+export const Table = styled.div`
   table {
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ const Table = styled.div`
   }
 `
 
-const EsquemaGlass = styled.div`
+export const EsquemaGlass = styled.div`
   width: 100%;
   max-width: 500px;
   display: relative;
@@ -89,5 +89,3 @@ const EsquemaGlass = styled.div`
     cursor: pointer;
   }
 `
-
-export { Section, Table, EsquemaGlass }
