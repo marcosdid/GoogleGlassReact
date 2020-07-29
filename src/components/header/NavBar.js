@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 
-import { Myheader } from './styles'
-
-
+import { Myheader, ImgStyle } from './styles'
 import Burguer from './Burguer'
 
 function Header() {
@@ -17,7 +16,9 @@ function Header() {
 
   return (
     <Myheader refHeader={refHeader} >
-      <img src='' alt=''/>
+      <Link to="/">
+        <ImgStyle refHeader={refHeader} />
+      </Link>
       <Burguer refHeader={refHeader} />
     </Myheader>
   )

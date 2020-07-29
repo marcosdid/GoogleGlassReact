@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 import logo from '../../assents/logo.png'
-import logo2 from '../../assents/glass-logo-peq.jpg'
 
-const Myheader = styled.div`
+export const Myheader = styled.div`
   display: flex;
   position: fixed;
   z-index: 2;
@@ -11,6 +10,7 @@ const Myheader = styled.div`
   right: 0;
   left: 0;
   width: 100%;
+  height: ${props => props.refHeader ? '50px' : '70px'};
   padding: ${props => props.refHeader ? '8px 135px' : '20px 135px'};
   justify-content: space-between;
   align-items: center;
@@ -24,28 +24,26 @@ const Myheader = styled.div`
     padding-left: 20px;
     padding-right: 20px;
   }
-  img {
-    background-image: url(${props => props.refHeader ? logo2 : logo });
-    background-size: 170px 40px;
-    background-repeat: no-repeat;
-    border: 0;
-    width: 170px;
-    height: 40px;
-    transition: 0.3s;
-    @media (max-width: 900px) {
-      background-size: 110px 30px;
-      width: 110px;
-      height: 30px;
-    }
-    @media (max-width: 425px) {
-      background-size: 90px 20px;
-      width: 90px;
-      height: 20px;
-    }
+`
+
+export const ImgStyle = styled.img.attrs({
+  src: logo,
+  alt: "logo"
+})` 
+  width: ${props => props.refHeader ? '160px' : '170px'};
+  height: ${props => props.refHeader ? '35px' : '40px'};
+  transition: 0.3s;
+  @media (max-width: 900px) {
+    width: 110px;
+    height: 30px;
+  }
+  @media (max-width: 425px) {
+    width: 90px;
+    height: 20px;
   }
 `
 
-const Burguer = styled.div`
+export const Burguer = styled.div`
   display: none;
   width: 30px;
   height: 20px;
@@ -95,7 +93,7 @@ const Burguer = styled.div`
   }
 `
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,13 +107,14 @@ const Nav = styled.nav`
     li {
       margin: 0 15px 0;
       a {
+        text-transform: uppercase;
         color: black;
         text-decoration: none;
-        font-size: 2.0rem;
-
+        font-size: 1.8rem;
+        padding-bottom: 5px;
         @media (hover: hover) {
           &:hover {
-            color: #1087ff;
+            border-bottom: 2px solid #1087ff;
           }
         }
       }
@@ -155,5 +154,3 @@ const Nav = styled.nav`
  
 
 `
-
-export { Burguer, Myheader, Nav }
