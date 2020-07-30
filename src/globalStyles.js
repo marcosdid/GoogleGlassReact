@@ -3,10 +3,12 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyled = createGlobalStyle`
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   body, html, div#root {
-    height: 100vh;
+    height: 100%;
     margin: 0;
   }
 
@@ -42,9 +44,6 @@ const GlobalStyled = createGlobalStyle`
     color: rgb(77, 77, 77);
   }
 
-  div#root {
-    height: 100%;
-  }
 `
 
 
