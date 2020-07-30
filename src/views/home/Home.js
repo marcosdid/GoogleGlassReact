@@ -3,6 +3,7 @@ import React from 'react'
 import Header from '../../components/header/NavBar'
 import Footer from '../../components/Footer'
 import YtVideo from '../../components/YtVideo'
+import Social from '../../components/Social'
 
 import { Section, Article, Aside } from './style'
 import { Container, DivGeneric } from '../style.js'
@@ -72,6 +73,7 @@ function Home() {
         </Section>
         <Footer/>
       </Container>
+      <Social />
     </DivGeneric>
   )
 }

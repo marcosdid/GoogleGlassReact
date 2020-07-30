@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Slider from 'infinite-react-carousel'
 
 import Header from '../../components/header/NavBar'
@@ -8,9 +8,18 @@ import { Section, AlbumFotosStyle, ImgStyle } from './style'
 import albumFotos from './fotos'
 
 export default function Fotos() {
+  const [slidesPerRowSettings, setSlidesPerRowSettings] = useState(3)
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      const resize = window.innerWidth
+      resize <= 1024 ? setSlidesPerRowSettings(1) : setSlidesPerRowSettings(3)
+    })
+  }, [])
+
   const settings = {
     centerMode: true,
-    slidesPerRow: 3,
+    slidesPerRow: slidesPerRowSettings,
     centerPadding: 20,
   }
 

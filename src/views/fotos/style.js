@@ -19,12 +19,12 @@ export const Section = styled.section`
 `
 
 export const AlbumFotosStyle = styled.div`
-  display: flex;
-  width: 100%;
-  grid-gap: 10px;
-  overflow: auto;
+  
   .slider {
     width: 100%;
+    @media (max-width: 764px) {
+      height: 100%;
+    }
   }
 `
 
