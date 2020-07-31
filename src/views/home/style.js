@@ -27,7 +27,7 @@ export const Article = styled.article`
   }
   img {
     width: 100%;
-    padding: 0px 30px;
+    padding: 10px 30px;
   }
 
 `

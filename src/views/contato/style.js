@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const SectionStyle = styled.section`
   display: flex;
   height: 100%;
+  margin-top: 40px;
   background-image: url(${props => props.imgGlass});
   background-size: 55%;
   background-repeat: no-repeat;
@@ -26,7 +27,7 @@ export const SectionStyle = styled.section`
 export const DivFormStyle = styled.div`
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 35%;
   height: 100%;
   padding-top: 20px;
   @media (max-width: 768px) {

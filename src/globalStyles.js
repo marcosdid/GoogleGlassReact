@@ -29,23 +29,22 @@ const GlobalStyled = createGlobalStyle`
     font-size: 3rem;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 0px;
   }
 
   h2 {
     font-size: 2.1rem;
     text-align: center;
+    margin: 7px 0px;
   }
 
   p {
     text-indent: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: justify;
     color: rgb(77, 77, 77);
   }
 
 `
-
 
 export default GlobalStyled
 

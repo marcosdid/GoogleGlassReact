@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Section = styled.section`
   display: flex;
   justify-content: space-evenly;
+  margin-top: 20px;
   @media (max-width: 1200px) {
     flex-direction: column-reverse;
     justify-content: center;
