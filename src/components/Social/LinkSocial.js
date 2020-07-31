@@ -1,11 +1,9 @@
 import React from 'react'
 
-import {ImgSocialStyle} from './style'
-
-const LinkSocial = ({src, href}) => {
+const LinkSocial = ({src, href, width=32}) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-        <ImgSocialStyle src={src}/>
+        <img width={width + 'px'} src={src} alt="social"/>
     </a>
   )
 }
