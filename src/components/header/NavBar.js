@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
-
-import { Myheader, ImgStyle } from './styles'
+import useHasScrolled from '../../hooks/useHasScrolled'
 
 import Burguer from './Burguer'
 import Social from '../../components/Social'
 
+import { Myheader, ImgStyle } from './styles'
+
 function Header() {
-  const [refHeader, setRefHeader] = useState(false);
+  const scrolled = useHasScrolled()
+  const [refHeader, setRefHeader] = useState(scrolled);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      const scroll = window.scrollY;
-      scroll >= 1 ? setRefHeader(true) : setRefHeader(false);
-    })
-  })
+    setRefHeader(scrolled)
+  }, [scrolled])
 
   return (
     <Myheader refHeader={refHeader} >

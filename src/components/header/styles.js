@@ -5,7 +5,6 @@ import logo from '../../assents/logo.png'
 export const Myheader = styled.div`
   display: flex;
   position: fixed;
-  z-index: 2;
   top: 0;
   right: 0;
   left: 0;
@@ -17,6 +16,7 @@ export const Myheader = styled.div`
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  z-index: 2;
   @media (max-width: 900px) {
     padding: ${props => props.refHeader ? '20px 55px' : '20px 55px'};
   }
@@ -45,11 +45,11 @@ export const ImgStyle = styled.img.attrs({
 
 export const Burguer = styled.div`
   display: none;
+  position: fixed;
+  top: ${props => props.refHeader ? '15px' : '25px'};
+  right: 55px;
   width: 30px;
   height: 20px;
-  position: fixed;
-  top: 25px;
-  right: 55px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -61,18 +61,15 @@ export const Burguer = styled.div`
   @media (max-width: 768px) {
     right: 20px;
   }
-  @media (max-width: 425px) {
-    top:20px
-  }
   @media (hover: hover) {
     &:hover div {
       background-color: #1087ff;
     }
   }
   div {
-    margin-top: 0px;
     width: 2.5rem;
     height: 3px;
+    margin-top: 0px;
     background-color: black;
     transform-origin: 1px;
     transition: .3s;
@@ -97,6 +94,8 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  transition: 0.4s opacity;
   ul {
     display: flex;
     align-items: center;
@@ -107,10 +106,10 @@ export const Nav = styled.nav`
     li {
       margin: 0 15px 0;
       a {
-        text-transform: uppercase;
         color: black;
-        text-decoration: none;
         font-size: 1.8rem;
+        text-transform: uppercase;
+        text-decoration: none;
         padding-bottom: 5px;
         @media (hover: hover) {
           &:hover {
@@ -122,35 +121,29 @@ export const Nav = styled.nav`
   }
 
   @media (max-width: 900px) {
-    position: absolute;
-    align-items: center;
-    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-    opacity: ${({open}) => open ? '1' : '0'};
+    position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
-    transition: 0.3s ease-in-out;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, .2);
+    transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+    opacity: ${({open}) => open ? '1' : '0'};
     ul {
-      width: 100%;
-      align-items: center;
-      justify-content: space-around;
-      padding-right: 50px;
+      height: 100%;
+      padding: 30px 30px 0px;
+      transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
+      background-color: white;
+      flex-direction: column;
+      transition: 0.4s transform;
       li {
-        margin: 0;
+        padding-top: 20px;
         a {
           color: black;
           font-size: 2.0rem;
-
-          @media (max-width: 424px) {
-            font-size: 1.5rem;
-          }
         }
       }
     }
   }
-
- 
-
 `

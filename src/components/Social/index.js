@@ -13,7 +13,7 @@ const SocialStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: ${props => props.refHeader ? 'fixed' : 'absolute'};
-  top: ${props => props.refHeader ? '70px' : '85px'};
+  top: ${props => props.refHeader ? '65px' : '85px'};
   left: 80px;
   width: 32px;
   width: 150px;

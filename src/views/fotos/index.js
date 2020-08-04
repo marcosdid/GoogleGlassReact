@@ -8,12 +8,12 @@ import { Section, AlbumFotosStyle, ImgStyle } from './style'
 import albumFotos from './fotos'
 
 export default function Fotos() {
-  const [slidesPerRowSettings, setSlidesPerRowSettings] = useState(3)
+  const perRow = window.screen.width <= 630 ? 1 : 3
+  const [slidesPerRowSettings, setSlidesPerRowSettings] = useState(perRow)
 
   useEffect(() => {
     window.addEventListener('resize', () => {
-      const resize = window.innerWidth
-      resize <= 1024 ? setSlidesPerRowSettings(1) : setSlidesPerRowSettings(3)
+      window.innerWidth <= 630 ? setSlidesPerRowSettings(1) : setSlidesPerRowSettings(3)
     })
   }, [])
 

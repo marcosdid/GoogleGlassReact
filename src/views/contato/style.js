@@ -42,7 +42,6 @@ export const DivFormStyle = styled.div`
   }
   p {
     text-indent: 0;
-    font-size: 2rem;
     margin: 0;
     color: black;
   }

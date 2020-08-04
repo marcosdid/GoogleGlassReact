@@ -4,14 +4,14 @@ const useHasScrolled = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
 
   const scrolled = useCallback(() => {
-    const scroll = document.documentElement.scrollTop
+    const scroll = window.scrollY
     scroll > 1 ? setHasScrolled(true) : setHasScrolled(false)
   }, [])
 
   useEffect(() => {
-    window.addEventListener('onscroll', scrolled)
+    window.addEventListener('scroll', scrolled)
     return () => {
-      window.removeEventListener('onscroll', scrolled)
+      window.removeEventListener('scroll', scrolled)
     } 
   })
 

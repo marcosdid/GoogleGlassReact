@@ -27,7 +27,7 @@ export const MyFooter = styled.footer`
   @media(max-width: 768px) {
     justify-content: space-between;
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       
     }
   }
