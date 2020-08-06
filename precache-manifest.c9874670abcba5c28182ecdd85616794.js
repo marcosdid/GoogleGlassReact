@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fff60d67d377b68c50d37defee781e75",
+    "revision": "a39a6ec20a3c4ae2de4180a38235f149",
     "url": "/GoogleGlassReact/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GoogleGlassReact/static/js/2.75008936.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6e9ebd95297e474146fb",
-    "url": "/GoogleGlassReact/static/js/main.2fac0460.chunk.js"
+    "revision": "78d838e1c85927869e9f",
+    "url": "/GoogleGlassReact/static/js/main.8d341996.chunk.js"
   },
   {
     "revision": "a5b0b701385260cab66d",
