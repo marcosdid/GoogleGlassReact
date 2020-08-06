@@ -13,6 +13,22 @@ import glassEsquema from '../../assents/glass-esquema-marcado.jpg'
 
 export default function Espec() {
   const [esquema, setEsquema] = useState()
+  const [coodsEsquema, setCoodsEsquema] = useState('desktop')
+
+  const coods = {
+    desktop: {
+      vidro: [179,202,270,260],
+      camera: [ 158,243,12 ],
+      gadgets: [76,51,12],
+      sensores: [28,143,83,216,84,249,27,169],
+    },
+    mobile: {
+      vidro: [101,147,136,143],
+      camera: [89, 137, 10],
+      gadgets: [43,29,10],
+      sensores: [16,8347,121,47,142,16,95]
+    }
+  }
 
   return (
     <DivGeneric>

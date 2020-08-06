@@ -8,7 +8,7 @@ import Espec from './views/espec'
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/contato' component={Contato} />

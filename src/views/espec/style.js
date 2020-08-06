@@ -83,6 +83,9 @@ export const EsquemaGlass = styled.div`
   width: 100%;
   max-width: 500px;
   display: relative;
+  @media(max-width: 540px) {
+    display: none;
+  }
   img {
     width: 100%;
   }

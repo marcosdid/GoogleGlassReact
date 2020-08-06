@@ -44,6 +44,11 @@ const GlobalStyled = createGlobalStyle`
     color: rgb(77, 77, 77);
   }
 
+  @media (max-width: 768px) {
+    html {
+      font-size: 50%;
+    }
+  }
 `
 
 export default GlobalStyled

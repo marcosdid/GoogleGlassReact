@@ -16,7 +16,7 @@ export const Myheader = styled.div`
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  z-index: 2;
+  z-index: 20;
   @media (max-width: 900px) {
     padding: ${props => props.refHeader ? '20px 55px' : '20px 55px'};
   }
@@ -74,7 +74,7 @@ export const Burguer = styled.div`
     transform-origin: 1px;
     transition: .3s;
     &:nth-child(1) {
-      transform: ${({open}) => open ? 'rotate(45deg) translate(7px,-8px)' : 'rotate(0)'};
+      transform: ${({open}) => open ? 'rotate(45deg) translate(10px,-9px)' : 'rotate(0)'};
       width: ${({open}) => open ? '2.8rem' : '2.5rem'};
     }
 
@@ -84,7 +84,7 @@ export const Burguer = styled.div`
     }
 
     &:nth-child(3) {
-      transform: ${({open}) => open ? 'rotate(-45deg) translate(7px,8px)' : 'rotate(0)'};
+      transform: ${({open}) => open ? 'rotate(-45deg) translate(11px,8px)' : 'rotate(0)'};
       width: ${({open}) => open ? '2.8rem' : '2.5rem'};
     }
   }
@@ -130,20 +130,37 @@ export const Nav = styled.nav`
     background-color: rgba(0, 0, 0, .2);
     transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
     opacity: ${({open}) => open ? '1' : '0'};
-    ul {
+    div.divgeneric {
       height: 100%;
       padding: 30px 30px 0px;
       transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
       background-color: white;
-      flex-direction: column;
       transition: 0.4s transform;
-      li {
-        padding-top: 20px;
-        a {
-          color: black;
-          font-size: 2.0rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      ul {
+        flex-direction: column;
+        li {
+          padding-top: 20px;
+          a {
+            color: black;
+            font-size: 2.0rem;
+          }
         }
       }
     }
+  }
+    
+`
+
+export const SocialStyleFooter = styled.div`
+  display: none;
+  justify-content: space-between;
+  width: 120px;
+  padding-bottom: 10px;
+  @media(max-width: 768px) {
+    display: flex;
   }
 `
