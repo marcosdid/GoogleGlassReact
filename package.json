@@ -50,7 +50,7 @@
     "eslint-plugin-styled-components-a11y": "^0.0.150005",
     "gh-pages": "^3.1.0",
     "prettier": "^2.0.5",
-    "stylelint": "^13.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"
